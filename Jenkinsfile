@@ -9,14 +9,17 @@ pipeline {
 				git 'https://github.com/Nifori/hello-world'
 			}
 		}
+		stage('Test') {
+			steps {
+			
+				echo 'Testing..'
+				sh 'mvn test'
+			}
+		}
 		stage('Build') {
 			steps {
 				echo 'Building..'
-			}
-		}
-		stage('Test') {
-			steps {
-				echo 'Testing..'
+				sh 'mvn package'
 			}
 		}
 	}
