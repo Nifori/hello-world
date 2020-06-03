@@ -14,7 +14,6 @@ pipeline {
 			
 				echo 'Check..'
 				sh 'mvn -v'
-				sh 'JAVA_HOME'
 				sh 'java -version'
 			}
 		}
