@@ -25,6 +25,9 @@ pipeline {
 			}
 		}
 		stage('SonarQube analysis') {
+			script {
+          		scannerHome = tool 'Scanner'
+        	}
     		withSonarQubeEnv('PersonalSonarQube') {
       			sh 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.6.0.1398:sonar'
    	 		}
