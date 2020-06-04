@@ -13,6 +13,7 @@ pipeline {
 		stage('Check') {
 			steps {			
 				echo 'Check..'
+				sh 'echo $JAVA_HOME'
 				sh 'java -version'
 				sh 'mvn -v'
 			}
