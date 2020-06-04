@@ -11,16 +11,14 @@ pipeline {
 			}
 		}
 		stage('Check') {
-			steps {
-			
+			steps {			
 				echo 'Check..'
-				sh 'mvn -v'
 				sh 'java -version'
+				sh 'mvn -v'
 			}
 		}
 		stage('Test') {
-			steps {
-			
+			steps {			
 				echo 'Testing..'
 				sh 'mvn test'
 			}
