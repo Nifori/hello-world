@@ -14,7 +14,7 @@ pipeline {
 			steps {			
 				echo 'Check..'
 				sh 'echo $JAVA_HOME'
-				sh 'cd ./var/jenkins_home/tools/hudson.model.JDK/javajdk'
+				sh 'cd ./../../../tools/hudson.model.JDK/javajdk'
 				sh 'ls -a'
 				sh 'java -version'
 				sh 'mvn -v'
