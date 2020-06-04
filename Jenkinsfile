@@ -11,19 +11,19 @@ pipeline {
 				echo 'Check..'
 				sh 'echo $JAVA_HOME'
 				sh 'java -version'
-				sh 'mvn -v'
+				sh 'M3 -v'
 			}
 		}
 		stage('Test') {
 			steps {			
 				echo 'Testing..'
-				sh 'mvn test'
+				sh 'M3 test'
 			}
 		}
 		stage('Build') {
 			steps {
 				echo 'Building..'
-				sh 'mvn package'
+				sh 'M3 package'
 			}
 		}
 	}
