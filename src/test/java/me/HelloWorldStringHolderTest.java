@@ -25,7 +25,7 @@ class HelloWorldStringHolderTest {
 	
 	@Test
 	void testGetReversedString() throws Exception {
-		assertThat(this.underTest.getReversetString(), is(HELLO_WORLD));
+		assertThat(this.underTest.getReversetString(), is(REVERSED_HELLO_WORLD));
 	}
 
 }
