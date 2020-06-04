@@ -1,5 +1,9 @@
 pipeline {
 	agent any
+	tools {
+		jdk 'javajdk'
+		maven 'M3'
+	}
 	stages {
 		stage('Checkout'){
 			steps {
@@ -11,19 +15,19 @@ pipeline {
 				echo 'Check..'
 				sh 'echo $JAVA_HOME'
 				sh 'java -version'
-				sh 'M3 -v'
+				sh 'mvn -v'
 			}
 		}
 		stage('Test') {
 			steps {			
 				echo 'Testing..'
-				sh 'M3 test'
+				sh 'mvn test'
 			}
 		}
 		stage('Build') {
 			steps {
 				echo 'Building..'
-				sh 'M3 package'
+				sh 'mvn package'
 			}
 		}
 	}
